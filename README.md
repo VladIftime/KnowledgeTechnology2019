@@ -1,6 +1,9 @@
 # KnowledgeTechnology2019
 Knowledge Technology Practical
 
+## Group information
+Group 15. Vlad Iftime(s3426394), Andreea Toca(s3454177), Rafael Tappe Maestro(s3258734)
+
 ## Setup
 Install node
 https://nodejs.org/en/download/
@@ -20,3 +23,4 @@ To start the server
 Open web browser and enter domain
 
     http://localhost:8080/
+    
