@@ -1,8 +1,3 @@
-function doInsertion(){
-    const modifiableObject = document.getElementById("insert")
-    modifiableObject.innerHTML = "Power of JavaScript"
-}
-
 //Test for the Question class and objects
 class Question {
     constructor(question, choices, tag) {

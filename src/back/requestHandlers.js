@@ -1,43 +1,64 @@
 const fs = require("fs")
 
+function readFile(response, funcInfo){
+    console.log("Request handler '%s' was called.", funcInfo.funcName)
+    fs.readFile(funcInfo.filePath, function (err, file){
+        if (err) throw err
+        response.writeHead(200, {"Content-Type": funcInfo.fileType})
+        response.write(file)
+        response.end()
+    })
+}
+
+/*
+    Keep readIndex for loading a starting page under root:
+        http://ourquiz.com/
+*/
 function readIndex(response){
-    console.log("Request handler 'readIndex' was called.")
-    fs.readFile("./src/front/index.html", function (err, html){
-        if (err) throw err
-        response.writeHeader(200, {"Content-Type": "text/html"})
-        response.write(html)
-        response.end()
-    })
+    const funcInfo = {
+        funcName: "readIndex",
+        filePath: "./src/front/index.html",
+        fileType: "text/html"
+    }; readFile(response, funcInfo)
 }
 
-function readFavicon(response){
-    console.log("Request handler 'readFavicon' was called.")
-    fs.readFile("./img/favicon.png", function (err, png){
-        if (err) throw err
-        response.writeHeader(200, {"Content-Type": "image/png"})
-        response.write(png)
-        response.end()
-    })
+/*
+    readHTML is for loading any other pages.
+        https://ourquiz.com/otherpage.html
+    For simplicity we use .html extensions in the domain bar.
+    This way we can directly load a file from the pathname.
+*/
+function readHTML(response, pathname){
+    const funcInfo = {
+        funcName: "readIndex",
+        filePath: "./src/front" + pathname,
+        fileType: "text/html"
+    }; readFile(response, funcInfo)
 }
 
-function readCSS(response){
-    console.log("Request handler 'readCSS' was called.")
-    fs.readFile("./src/front/style.css", function (err, css){
-        if (err) throw err
-        response.writeHeader(200, {"Content-Type": "text/css"})
-        response.write(css)
-        response.end()
-    })
+function readFavicon(response, pathname){
+    const funcInfo = {
+        funcName: "readFavicon",
+        filePath: "./img" + pathname,
+        fileType: "image"
+    }; readFile(response, funcInfo)
 }
 
-function readJS(response){
-    console.log("Request handler 'readJS' was called.")
-    fs.readFile("./src/front/dosome.js", function (err, js){
-        if (err) throw err
-        response.writeHeader(200, {"Content-Type": "text/javascript"})
-        response.write(js)
-        response.end()
-    })
+function readCSS(response, pathname){
+    const funcInfo = {
+        funcName: "readCSS",
+        filePath: "./src/front/" + pathname,
+        fileType: "text/css"
+    }; readFile(response, funcInfo)
+}
+
+
+function readJS(response, pathname){
+    const funcInfo = {
+        funcName: "readJS",
+        filePath: "./src/front" + pathname,
+        fileType: "text/javascript"
+    }; readFile(response, funcInfo)
 }
 
 exports.readIndex = readIndex
