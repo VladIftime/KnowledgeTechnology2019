@@ -18,7 +18,7 @@ class Question {
     showChoices() {
         for (let index = 0; index < this.choices.length; index++) {
             const choice = this.choices[index];
-            document.getElementById(this.tag).innerHTML += ('<input type=\'radio\'>' + choice + '<br>');
+            document.getElementById(this.tag).innerHTML += ('<input type=\'radio\' name=' + this.tag + ' value= \''  + choice + '\'>'+ choice + '<br>');
         }
     }
 }
