@@ -24,3 +24,8 @@ Open web browser and enter domain
 
     http://localhost:8080/
     
+## Ideas
+- A collapsible menu in CSS
+https://alligator.io/css/collapsible/
+- A collapsible menu in JS
+https://www.w3schools.com/howto/howto_js_collapsible.asp
