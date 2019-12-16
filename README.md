@@ -29,3 +29,5 @@ Open web browser and enter domain
 https://alligator.io/css/collapsible/
 - A collapsible menu in JS
 https://www.w3schools.com/howto/howto_js_collapsible.asp
+- Maybe accordeon is a bit more what we need
+https://www.w3schools.com/howto/howto_js_accordion.asp
