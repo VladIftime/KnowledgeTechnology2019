@@ -9,12 +9,22 @@ html {
 
 @media screen and (min-width: 20cm) {
     .brokenLine {display: none;}
-    .oneLine {font-size: 10vw; display: block}
+    .oneLine {font-size: 8vw; display: block}
 }
 
 body {
     font-size: 2em;
     text-align: center;
+}
+
+.q-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.q-box {
+    display: block;
+    text-align: left;
 }
 
 nav {
@@ -58,17 +68,3 @@ hr {
     padding: 0; 
 }
 
-button {
-    background-color: rgb(65, 224, 208);
-    color: white;
-    border: 0.2em solid rgb(138, 40, 230);
-    border-radius: 12%;
-    padding: 1em 1em;
-
-    text-align: center;
-    display: inline-block;
-    font-size: 1em;
-    font-family: "Courier New", Courier, monospace;
-
-    outline: none;
-}

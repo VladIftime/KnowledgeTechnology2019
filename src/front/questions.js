@@ -8,7 +8,7 @@ class Question {
     }
 
     showQuestion() {
-        document.getElementById(this.id).innerHTML = '<p>' + this.question + '<p>';
+        document.getElementById(this.id).innerHTML = '<p>' + this.question + '</p>';
     }
 
     showChoices() {
@@ -27,10 +27,25 @@ class MultipleChoice extends Question{
     }
 
     showChoices() {
+        let htmlString = '<div class = q-wrapper> <div class = q-box>';
         for (let index = 0; index < this.choices.length; index++) {
-            const choice = this.choices[index];
-            document.getElementById(this.id).innerHTML += ('<input type=\'radio\' name=' + this.id + ' value= \''  + index + '\'>'+ choice + '<br>');
+            htmlString += ('<input type=\'radio\' name=' + this.id + ' value= \''  + index + '\'>'+ this.choices[index] + '<br>');
         }
+        document.getElementById(this.id).innerHTML += htmlString + '</div> </div>';
+    }
+}
+
+class MultipleChoiceImpair extends Question{
+    constructor(question, hint, id) {
+        super(question, hint, ['unimpaired', 'partially impaired', 'impaired'], '', id);
+    }
+
+    showChoices() {
+        let htmlString = '<div class = q-wrapper> <div class = q-box>';
+        for (let index = 0; index < this.choices.length; index++) {
+            htmlString += ('<input type=\'radio\' name=' + this.id + ' value= \''  + index + '\'>'+ this.choices[index] + '<br>');
+        }
+        document.getElementById(this.id).innerHTML += htmlString + '</div> </div>';
     }
 }
 
@@ -38,16 +53,18 @@ class TickBox extends Question{
     constructor(question, hint, choices, id) {
         super(question, hint, choices, '', id);
     }
+
     showChoices() {
+        let htmlString = '<div class = q-wrapper> <div class = q-box>';
         for (let index = 0; index < this.choices.length; index++) {
-            const choice = this.choices[index];
-            document.getElementById(this.id).innerHTML += ('<input type=\'checkbox\' name=\'option\' value= \'1\'>' + choice + '<br>');
+            htmlString += ('<input type=\'checkbox\' name=\'option\' value= \'1\'>' + this.choices[index] + '<br>');
         }
+        document.getElementById(this.id).innerHTML += htmlString + '</div> </div>';
     }
 }
 
 const question1 = new MultipleChoice('What is your preferred gender?','Test', ['Male', 'Female', 'Other'], 'gender');
-const question2 = new MultipleChoice('How well can you eat by yoursef?', 'Think', ['Not Well', 'Fair', 'No problem'], 'eat');
+const question2 = new MultipleChoiceImpair('How well can you eat by yoursef?', 'Think', 'eat');
 const question3 = new TickBox('What fears so you have?', 'Day to day', ['Death', 'Poverty', 'Loneliness', 'Illness'], 'fear');
 question1.display();
 question2.display();
