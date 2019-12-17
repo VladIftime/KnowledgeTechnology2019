@@ -9,6 +9,7 @@ const handle = {
     
     "/questions.js": requestHandlers.readJS,
     "/inference.js": requestHandlers.readJS,
+    "/collapsible.js": requestHandlers.readJS,
 }
 
 server.start(router.route, handle)
