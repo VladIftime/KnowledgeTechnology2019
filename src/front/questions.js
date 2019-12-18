@@ -28,7 +28,7 @@ class MultipleChoice extends Question{
     }
 
     showChoices() {
-        let htmlString = '<div class = q-wrapper> <div class = q-box>';
+        let htmlString = '<div class = ans-grid> <div class = ans-box>';
         for (let index = 0; index < this.choices.length; index++) {
             htmlString += ('<input type=\'radio\' name=' + this.name + ' value= \''  + index + '\'>'+ this.choices[index] + '<br>');
         }
@@ -42,7 +42,7 @@ class MultipleChoiceImpair extends Question{
     }
 
     showChoices() {
-        let htmlString = '<div class = q-wrapper> <div class = q-box>';
+        let htmlString = '<div class = ans-grid> <div class = ans-box>';
         for (let index = 0; index < this.choices.length; index++) {
             htmlString += ('<input type=\'radio\' name=' + this.name + ' value= \''  + index + '\'>'+ this.choices[index] + '<br>');
         }
@@ -56,7 +56,7 @@ class TickBox extends Question{
     }
 
     showChoices() {
-        let htmlString = '<div class = q-wrapper> <div class = q-box>';
+        let htmlString = '<div class = ans-grid> <div class = ans-box>';
         for (let index = 0; index < this.choices.length; index++) {
             htmlString += ('<input type=\'checkbox\' name=\'option\' value= \'1\'>' + this.choices[index] + '<br>');
         }
