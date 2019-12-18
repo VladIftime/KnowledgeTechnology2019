@@ -17,16 +17,6 @@ body {
     text-align: center;
 }
 
-.q-wrapper {
-    display: flex;
-    justify-content: center;
-}
-
-.q-box {
-    display: block;
-    text-align: left;
-}
-
 nav {
     font-weight: bold;
 }
@@ -89,4 +79,25 @@ hr {
     display: none;
     overflow: hidden;
     background-color: darkcyan;
+}
+
+.q-grid {
+    display: grid;
+    grid-template-columns: 30vw auto;
+}
+
+.q-grid > p {
+    text-align: left;
+    grid-column: 2;
+}
+
+.ans-grid {
+    display: grid;
+    grid-template-columns: 40vw auto;
+}
+
+.ans-box {
+    display: block;
+    text-align: left;
+    grid-column: 2;
 }
