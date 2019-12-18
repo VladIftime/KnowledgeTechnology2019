@@ -1,17 +1,35 @@
-var coll = document.getElementsByClassName("collapsible");
-var i;
+/*
+    This file controls collapsibles.
+    When one card is folded out, the other ones close.
+*/
 
-for (i = 0; i < coll.length; i++) {
-    coll[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var content = this.nextElementSibling;
-        if (content.style.display === "block") {
-            content.style.display = "none";
-        } else {
-            content.style.display = "block";
-        }
-        if(this.nextElementSibling != arr[j]) arr[j].classList.toggle("show");
-
-    });
+// Collect all elements of the class collapsible and initialize them.
+let initialized = 0
+if (initialized == 0) {
+    initialized = 1
+    var coll = document.getElementsByClassName("collapsible")
+    initialize()
 }
 
+
+// Set all cards to closed
+function closeAll() {
+    for (let i = 0; i < coll.length; i++) {
+        coll[i].nextElementSibling.style.display = "none"
+    }
+}
+
+// Add event listeners and a function to all elements of the class collapsible
+function initialize() {
+    for (let i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {     // coll[i] can be targeted with "this" inside anonymous function
+            this.classList.toggle("collapsible-active")
+            if (this.nextElementSibling.style.display === "block") {
+                this.nextElementSibling.style.display = "none"
+            } else {
+                closeAll()                                  // Close all cards, then open current one
+                this.nextElementSibling.style.display = "block"
+            }
+        })
+    }
+}

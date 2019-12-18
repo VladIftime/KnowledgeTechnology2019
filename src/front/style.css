@@ -80,7 +80,7 @@ hr {
     font-size: 15px;
 }
 
-.active, .collapsible:hover {
+.collapsible-active, .collapsible:hover {
     background-color: #555;
 }
 
