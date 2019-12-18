@@ -68,7 +68,7 @@ hr {
     padding: 0; 
 }
 
-.collapsible {
+.collapse {
     background-color: #777;
     color: white;
     cursor: pointer;
@@ -80,11 +80,11 @@ hr {
     font-size: 15px;
 }
 
-.collapsible-active, .collapsible:hover {
+.collapse-active, .collapse:hover {
     background-color: #555;
 }
 
-.content {
+.collapse-content {
     padding: 0 18px;
     display: none;
     overflow: hidden;

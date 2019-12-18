@@ -7,7 +7,7 @@
 let initialized = 0
 if (initialized == 0) {
     initialized = 1
-    var coll = document.getElementsByClassName("collapsible")
+    var coll = document.getElementsByClassName("collapse")
     initialize()
 }
 
@@ -23,7 +23,7 @@ function closeAll() {
 function initialize() {
     for (let i = 0; i < coll.length; i++) {
         coll[i].addEventListener("click", function () {     // coll[i] can be targeted with "this" inside anonymous function
-            this.classList.toggle("collapsible-active")
+            this.classList.toggle("collapse-active")
             if (this.nextElementSibling.style.display === "block") {
                 this.nextElementSibling.style.display = "none"
             } else {
