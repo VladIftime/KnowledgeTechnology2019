@@ -86,9 +86,9 @@ class TickBox extends Question{
     }
 }
 //Communication
-const question1 = new MultipleChoiceImpair('Hearing:','','Communication','question1')
-const question2 = new MultipleChoiceImpair('Sight:','','Communication','question2')
-const question3 = new MultipleChoiceImpair('Speech:','','Communication','question3')
+const question1 = new MultipleChoiceImpair('Ability to hear:','','Communication','question1')
+const question2 = new MultipleChoiceImpair('Ability to see:','','Communication','question2')
+const question3 = new MultipleChoiceImpair('Ability to speak:','','Communication','question3')
 const question4 = new MultipleChoiceImpair('Ability to express feelings or desires:','','Communication','question4')
 //Orientation
 const question5 = new MultipleChoiceImpair('Temporal orientation:','Be able to realise when you are supposed to arrive somewhere','Orientation','question5')
@@ -102,19 +102,19 @@ const question11 = new MultipleChoiceImpair('Ability to sit alone:','','Movement
 const question12 = new MultipleChoiceImpair('Ability to lay down alone:','','Movement','question12')
 const question13 = new MultipleChoiceImpair('Ability to visit infrastructure:','','Movement','question13')
 //Vital functions
-const question14 = new MultipleChoiceImpair('Breathing:','','Vital','question14')
+const question14 = new MultipleChoiceImpair('Ability to breath:','','Vital','question14')
 const question15 = new MultipleChoiceImpair('Cardio-vascular system:','','Vital','question15')
 const question16 = new MultipleChoiceImpair('Ability to sense temperature:','','Vital','question16')
 //Self Grooming
 const question17 = new MultipleChoiceImpair('Ability to shower/bath alone','','Grooming','question17')
 const question18 = new TickBox('Body care:','',['Skin','Mouth','Shaving','Hair','Nails','Ears','Nose','Eyes'],'Grooming','question18')
 //Eat-Drink
-const question19 = new MultipleChoiceImpair('Eating:','','EatDrink','question19')
-const question20 = new MultipleChoiceImpair('Drinking:','','EatDrink','question20')
-const question21 = new MultipleChoiceImpair('Cooking:','','EatDrink','question21')
+const question19 = new MultipleChoiceImpair('Ability to eat:','','EatDrink','question19')
+const question20 = new MultipleChoiceImpair('Ability to drink:','','EatDrink','question20')
+const question21 = new MultipleChoiceImpair('Ability to cook:','','EatDrink','question21')
 //Excretion
-const question22 = new MultipleChoiceImpair('Urination:','','Excretion','question22')
-const question23 = new MultipleChoiceImpair('Defecation','','Excretion','question23')
+const question22 = new MultipleChoiceImpair('Ability to urinate:','','Excretion','question22')
+const question23 = new MultipleChoiceImpair('Ability to defecate','','Excretion','question23')
 const question24 = new MultipleChoice('Urinary incontinence','',['No','Yes'],'Excretion','question24')
 const question25 = new MultipleChoice('Bowel incontinence','',['No','Yes'],'Excretion','question25')
 //Dress
@@ -136,5 +136,20 @@ question10.display()
 question11.display()
 question12.display()
 question13.display()
+question14.display()
+question15.display()
+question16.display()
+question17.display()
+question18.display()
+question19.display()
+question20.display()
+question21.display()
+question22.display()
+question23.display()
+question24.display()
+question25.display()
+question26.display()
+question27.display()
+question28.display()
 
 
