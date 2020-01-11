@@ -27,7 +27,7 @@ class Question {
 
     showQuestion() {
         let sec = document.getElementById(this.classOfQuestion).getElementsByClassName('collapse-content')[0];        
-        sec.innerHTML+= '<div class='+this.classOfQuestion+' id='+this.name+'><div class = q-grid><p>' + this.question + '</p></div></div>';
+        sec.innerHTML+= '<div class='+this.classOfQuestion+' id='+this.name+'><div class = q-grid><p class=font>' + this.question + '</p></div></div>';
     }
 
     showChoices() {
@@ -48,7 +48,7 @@ class MultipleChoice extends Question{
     showChoices() {
         let htmlString = '<div class = ans-grid> <div class = ans-box>';
         for (let index = 0; index < this.choices.length; index++) {
-            htmlString += ('<input type=\'radio\' name=' + this.name + ' value= \''  + index + '\'>'+ this.choices[index] + '<br>');
+            htmlString += ('<input type=\'radio\' name=' + this.name + ' value= \''  + index + '\'>' + '<label class=font>' + this.choices[index] + '</label><br>');
         }
         document.getElementById(this.name).innerHTML += htmlString + '</div> </div>';
     }

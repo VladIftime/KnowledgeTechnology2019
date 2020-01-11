@@ -4,16 +4,16 @@ html {
     background-color:  black;
 }
 
-.brokenLine {font-size: 16vw;}
+.brokenLine {font-size: 100%;}
 .oneLine {display: none;}
 
-@media screen and (min-width: 20cm) {
+@media screen and (min-width: 5cm) {
     .brokenLine {display: none;}
-    .oneLine {font-size: 8vw; display: block}
+    .oneLine {font-size: 100%; display: block}
 }
 
 body {
-    font-size: 2em;
+    font-size: 100%;
     text-align: center;
 }
 
@@ -60,13 +60,13 @@ hr {
 
 .collapse {
     font-family: "Courier New", Courier, monospace;
-    font-size: 1em;
+    font-size: 100%;
     font-weight: bold;
 
     background-color: #777;
     color: white;
     cursor: pointer;
-    padding: 1em;
+    padding: 0.5em;
     width: 100%;
     border: none;
     text-align: center;
@@ -105,3 +105,6 @@ hr {
     grid-column: 2;
 }
 
+.font {
+    font-size: 100%;
+}
