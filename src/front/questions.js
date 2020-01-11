@@ -8,9 +8,15 @@ function createSections() {
     let sec = document.getElementById('HealthAreas');
     for (let index = 0; index < areas.length; index++) {
         const element = areas[index]
-        let title = element
-        //title[0].toUpperCase();
-        sec.innerHTML+='<section id ='+ element + '> <button type="button" class="collapse">'+title+'</button> <div class="collapse-content"> </div> </section>'
+        let title = element.split(/(?=[A-Z])/)
+        let l = ''
+        for (let index = 0; index < title.length; index++) {
+            if(index > 0)
+                l += '-'
+            const e = title[index];
+            l += e
+        }
+        sec.innerHTML+='<section id ='+ element + '> <button type="button" class="collapse">'+l+'</button> <div class="collapse-content"> </div> </section>'
     }
 }
 

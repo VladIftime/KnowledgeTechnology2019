@@ -70,6 +70,7 @@ hr {
     border: none;
     text-align: center;
     outline: none;
+    transition: all 5s;
 }
 
 .collapse-active, .collapse:hover {
