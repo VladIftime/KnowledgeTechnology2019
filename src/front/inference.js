@@ -22,39 +22,53 @@ var scores = {
     SocialLife: Number(0),
     Existential: Number(0)
 }
-var totalScore = Number(0);
-var apply = 'No';
-var warning = false;
+var totalScore = Number(0)
+var apply = 'No'
+var warning = false
 // Thresholds
-const shouldApplyThreshold = 20;
-const maybeApplyThreshold = 10;
-const areaThreshold = 7;
+const shouldApplyThreshold = 20
+const maybeApplyThreshold = 10
+const areaThreshold = 7
+
+//Go to the questions that are unanswered; open the section and make them red; if this is the first question that is not answered
+//we also scroll to it
+function goToQuestion(questionId, healthArea){
+    let section = document.getElementById(healthArea).getElementsByClassName('collapse')[0]
+    section.classList.toggle("collapse-active")
+    section.nextElementSibling.style.display = 'block'
+    let question = document.getElementById(questionId).getElementsByClassName('q-grid')[0].getElementsByClassName('font')[0]
+    question.classList.add('warning')
+    if(warning == false){
+        question.scrollIntoView()
+    }
+    warning = true
+}
 
 //Calculate the score of a given question
-function scoreOfQuestion(questionId) {
+function scoreOfQuestion(questionId, healthArea) {
     let options = document.getElementsByName(questionId);
     for (let i = 0; i < options.length; i++) {
         if(options[i].checked){
-            return options[i].value;
+            let question = document.getElementById(questionId).getElementsByClassName('q-grid')[0].getElementsByClassName('font')[0]
+            question.classList.remove('warning')
+            return options[i].value
         }
     }
-    warning = true;
-    let question = document.getElementById(questionId).getElementsByClassName('q-grid')[0]; 
-    question.scrollIntoView();
-    return Number(0);
+    goToQuestion(questionId,healthArea)
+    return Number(0)
 }
 //Calculate the total score as well as the score for each area
 function calculateScores() {
-    totalScore = Number(0);
+    totalScore = Number(0)
     for (const area in scores) {
         if (scores.hasOwnProperty(area)) {
-            let areaScore = Number(0);
+            let areaScore = Number(0)
             const questions = document.getElementsByClassName(area);
             for (let i = 0; i < questions.length; i++) {
-                const question = questions[i];
-                areaScore += scoreOfQuestion(question.id);
+                const question = questions[i]
+                areaScore += scoreOfQuestion(question.id,area)
             }
-            totalScore += Number(areaScore);
+            totalScore += Number(areaScore)
             scores[area] = Number(areaScore)
         }
     }
@@ -64,33 +78,33 @@ function calculateScores() {
 //Based on the scores calculated above infer the best option for the user
 function inference(){
     const applyNo = 'Based on the given answers you would most likely not obtain care.';
-    const applyMaybe = 'Based on the given answers you should consider going to a proffesional to see if you could obtain outpatient care.';
+    const applyMaybe = 'Based on the given answers you should consider going to a professional to see if you could obtain outpatient care.';
     const applyYes = 'Based on the given answers you would most likely obtain outpatient care. Please contact a professional to help you with the procedure.';
     //Determine if the patient suffers in one area enough to be consider for care
     for (const area in scores) {
         if (scores.hasOwnProperty(area)) {
-            const element = scores[area];
+            const element = scores[area]
             if(element > areaThreshold)
-                apply = 'maybe';
+                apply = 'maybe'
         }
     }
     
     
     if(totalScore >= maybeApplyThreshold)
-        apply = 'maybe';
+        apply = 'maybe'
 
     if(totalScore >= shouldApplyThreshold)
-        apply = 'yes';
+        apply = 'yes'
 
     switch (apply) {
         case 'maybe':
             resultsContainer.innerHTML = applyMaybe;
-            break;
+            break
         case 'yes':
             resultsContainer.innerHTML = applyYes;
-            break;
+            break
         default: resultsContainer.innerHTML = applyNo;
-            break;
+            break
     }
 }
 

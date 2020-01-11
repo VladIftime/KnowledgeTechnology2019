@@ -108,3 +108,7 @@ hr {
 .font {
     font-size: 100%;
 }
+
+.warning{
+    background-color: crimson;
+}
