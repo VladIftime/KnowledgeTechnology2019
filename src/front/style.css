@@ -1,7 +1,7 @@
 html {
     font-family: "Courier New", Courier, monospace;
     color: white;
-    background-color:  black;
+    background-color:	rgb(0, 0, 26);
 }
 
 .brokenLine {font-size: 100%;}
@@ -9,7 +9,7 @@ html {
 
 @media screen and (min-width: 5cm) {
     .brokenLine {display: none;}
-    .oneLine {font-size: 100%; display: block}
+    .oneLine {font-size: 200%; display: block}
 }
 
 body {
@@ -88,7 +88,7 @@ hr {
 
 .q-grid {
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-columns: 200px auto 50px;
     grid-gap: 0px;
 }
 
@@ -99,7 +99,7 @@ hr {
 
 .ans-grid {
     display: grid;
-    grid-template-columns: 25vw auto;
+    grid-template-columns: 150px 150px 200px auto;
 }
 
 .ans-box {
@@ -113,7 +113,8 @@ hr {
 }
 
 .warning{
-    background-color: crimson;
+    color: crimson;
+    font-weight: bold;
 }
 .button-submit{
     background-color: #4CAF50; /* Green */
@@ -140,18 +141,8 @@ hr {
     background-color: #4CAF50;
     color: white;
   }
-  
-  .div-wrap{
-      width: 50%;
-  }
 
-  .grid-container{
-      display: grid;
-      grid-template-columns:300px 360px 300px;
-      padding: 10px;
- 
-  }
-
-  .container{
-      grid-column: 2;
+  .h1-glow {
+    color: white;
+    text-shadow: 1px 1px 20px grey, 0 0 50px white, 0 0 50px white;
   }
