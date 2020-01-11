@@ -50,15 +50,31 @@
             <section id = existential></section>
         </article>
 
-            <!-- Testing collapsibles, only one should be one at a time -->
-            <section id = q1>
-                <button type="button" class="collapse">Open Q1</button>
+            <!-- Testing collapsibles, only one card should be open at a time -->
+            <section id = section1>
+                <button type="button" class="collapse">Communication</button>
                 <div class="collapse-content">
-                    <p>Lorem ipsum dolor.</p>
+                    <div class = q-grid>
+                        <p id= q1>Can you hear?</p>
+                    </div>
+                    <div class = ans-grid><div class = ans-box>
+                        <input type=radio name=ans1 value=0> unimpaired <br>
+                        <input type=radio name=ans1 value=1> partially impaired<br>
+                        <input type=radio name=ans1 value=2> impaired<br>
+                    </div></div>
+
+                    <div class = q-grid>
+                        <p id= q2>Can you see?</p>
+                    </div>
+                    <div class = ans-grid><div class = ans-box>
+                        <input type=radio name=ans2 value=0> unimpaired <br>
+                        <input type=radio name=ans2 value=1> partially impaired<br>
+                        <input type=radio name=ans2 value=2> impaired<br>
+                    </div></div>
                 </div>
             </section>
-            <section id = q2>
-                <button type="button" class="collapse">Open Q2</button>
+            <section id = section2>
+                <button type="button" class="collapse">Movement</button>
                 <div class="collapse-content">
                     <p>Lorem morem.</p>
                 </div>

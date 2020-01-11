@@ -10,7 +10,7 @@ class Question {
 
     showQuestion() {
         document.getElementById(this.id).innerHTML += '<p'+this.id+'>' + this.question + '</p>';
-    }
+    } //See previous commit for aligingin questions
 
     showChoices() {
         return null;
