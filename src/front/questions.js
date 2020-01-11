@@ -1,4 +1,21 @@
-//Test for the Question class and objects
+// Question class and objects
+let areas = ['communication','orientation','movement','vital','grooming',
+             'eat-drink','excretion','dress','rest-sleep','keep-busy',
+             'feeling-man-woman','safe-enviroment','social-life','existential'];
+
+
+function createSections() {
+    let sec = document.getElementById('HealthAreas');
+    for (let index = 0; index < areas.length; index++) {
+        const element = areas[index];
+        let title = element;
+        //title[0].toUpperCase();
+        sec.innerHTML+='<section id ='+ element + '> <button type="button" class="collapse">'+title+'</button> <div class="collapse-content"> </div> </section>'
+    }
+}
+
+createSections();
+
 class Question {
     constructor(question, hint, choices, points, classOfQuestion, name) {
         this.question = question;
@@ -9,11 +26,8 @@ class Question {
     }
 
     showQuestion() {
-        let sec = document.getElementById('HealthAreas');
-        sec.innerHTML+= '<p >' + this.question + '</p>' + '<div class='+this.classOfQuestion+' id='+this.name+'></div>';
-        console.log(this.classOfQuestion+" "+this.name);
-        
-        
+        let sec = document.getElementById(this.classOfQuestion).getElementsByClassName('collapse-content')[0];        
+        sec.innerHTML+= '<div class = q-grid><p>' + this.question + '</p></div>' + '<div class='+this.classOfQuestion+' id='+this.name+'></div>';
     }
 
     showChoices() {

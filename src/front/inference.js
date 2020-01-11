@@ -13,17 +13,18 @@ var scores = {
     vital:Number(0),
     grooming:Number(0),
     eatDrink:Number(0),
-    excretion:Number(0),
+    edivcretion:Number(0),
     dress:Number(0),
     restSleep:Number(0),
     keepBusy:Number(0),
     feelings:Number(0),
     safeEnviroment:Number(0),
     socialLife:Number(0),
-    existential:Number(0)
+    edivistential:Number(0)
 }
 var totalScore = Number(0);
 var apply = 'No';
+var warning = false;
 // Tresholds
 const shouldApplyTreshold = 20;
 const maybeApplyTreshold = 10;
@@ -37,6 +38,9 @@ function scoreOfQuestion(questionId) {
             return options[i].value;
         }
     }
+    warning = true;
+    let question = document.getElementById(questionId); 
+    
     return Number(0);
 }
 //Calculate the total score as well as the score for each area
@@ -59,12 +63,9 @@ function calculateScores() {
 
 //Based on the scores calcluated above infere the best option for the user
 function inference(){
-    calculateScores();
     const applyNo = 'Based on the given answers you would most likely not obtain care.';
     const applyMaybe = 'Based on the given answers you should consider going to a proffesional to see if you could obtain outpatient care.';
     const applyYes = 'Based on the given answers you would most likely obtain outpatient care. Please contact a professional to help you with the procedure.';
-    console.log(totalScore);
-    
     //Determine if the patient suffers in one area enough to be consider for care
     for (const area in scores) {
         if (scores.hasOwnProperty(area)) {
@@ -93,4 +94,21 @@ function inference(){
     }
 }
 
-submitButton.addEventListener("click", inference);
+function warn(show) {
+    var div = document.getElementById('warning');
+    div.style.display = show;
+}
+
+function warningOrScore() {
+    calculateScores();
+    if (warning == true) {
+        warn('block');
+        warning = false;
+    }
+    else {
+        warn('none')
+        inference();
+    }
+}
+
+submitButton.addEventListener("click", warningOrScore);
