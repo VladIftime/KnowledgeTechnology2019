@@ -39,8 +39,8 @@ function scoreOfQuestion(questionId) {
         }
     }
     warning = true;
-    let question = document.getElementById(questionId); 
-    
+    let question = document.getElementById(questionId).getElementsByClassName('q-grid')[0]; 
+    question.scrollIntoView();
     return Number(0);
 }
 //Calculate the total score as well as the score for each area

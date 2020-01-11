@@ -24,7 +24,7 @@ function initialize() {
     for (let i = 0; i < coll.length; i++) {
         coll[i].addEventListener("click", function () {     // coll[i] can be targeted with "this" inside anonymous function
             this.classList.toggle("collapse-active")        //TODO: Fix this
-            if (this.nextElementSibling.style.display === "block") {
+            if (this.nextElementSibling.style.display == "block") {
                 this.nextElementSibling.style.display = "none"
             } else {
                 closeAll()                                  // Close all cards, then open current one

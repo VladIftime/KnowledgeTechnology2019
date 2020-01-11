@@ -1,7 +1,7 @@
 // Question class and objects
-let areas = ['communication','orientation','movement','vital','grooming',
-             'eat-drink','excretion','dress','rest-sleep','keep-busy',
-             'feeling-man-woman','safe-enviroment','social-life','existential'];
+let areas = ['Communication','Orientation','Movement','Vital','Grooming',
+             'Eat-Drink','Excretion','Dress','Rest-Sleep','Keep-busy',
+             'Feeling-man-woman','Safe-enviroment','Social-life','Existential'];
 
 
 function createSections() {
@@ -27,7 +27,7 @@ class Question {
 
     showQuestion() {
         let sec = document.getElementById(this.classOfQuestion).getElementsByClassName('collapse-content')[0];        
-        sec.innerHTML+= '<div class = q-grid><p>' + this.question + '</p></div>' + '<div class='+this.classOfQuestion+' id='+this.name+'></div>';
+        sec.innerHTML+= '<div class='+this.classOfQuestion+' id='+this.name+'><div class = q-grid><p>' + this.question + '</p></div></div>';
     }
 
     showChoices() {
@@ -56,7 +56,7 @@ class MultipleChoice extends Question{
 
 class MultipleChoiceImpair extends MultipleChoice{
     constructor(question, hint, classOfQuestion, name) {
-        super(question, hint, ['unimpaired', 'partially impaired', 'impaired'], classOfQuestion, name);
+        super(question, hint, ['Unimpaired', 'Partially impaired', 'Impaired'], classOfQuestion, name);
     }
 }
 
@@ -73,12 +73,23 @@ class TickBox extends Question{
         document.getElementById(this.name).innerHTML += htmlString + '</div> </div>';
     }
 }
-
-const question1 = new MultipleChoiceImpair('How is your hearing?','','communication','question1');
-const question2 = new MultipleChoiceImpair('How would you describe the eyesight?','','communication','question2');
-const question3 = new MultipleChoice('Can talk?','Is your speaking impaired?',['Yes','Sometimes','No'],'communication','question3');
-const question4 = new MultipleChoice('Are intentions difficult to express?','',['Yes','Sometimes','No'],'communication','question4');
-const question5 = new MultipleChoice('Can walk alone?','',['Yes','Sometimes','No'],'movement','question5');
+//Communication
+const question1 = new MultipleChoiceImpair('Hearing:','','Communication','question1');
+const question2 = new MultipleChoiceImpair('Sight','','Communication','question2');
+const question3 = new MultipleChoiceImpair('Speech:','','Communication','question3');
+const question4 = new MultipleChoiceImpair('Ability to express feelings and desires:','','Communication','question4');
+//Orientation
+const question5 = new MultipleChoiceImpair('Temporal orientation:','','Orientation','question5');
+const question6 = new MultipleChoiceImpair('Local orientation:','','Orientation','question6');
+const question7 = new MultipleChoiceImpair('Personal orientation:','','Orientation','question7');
+const question8 = new MultipleChoiceImpair('Situational orientation:','','Orientation','question8');
+//Movement 
+const question9 = new MultipleChoiceImpair('Ability to walk alone:','','Movement','question9');
+const question10 = new MultipleChoiceImpair('Ability to stand alone:','','Movement','question10');
+const question11 = new MultipleChoiceImpair('Ability to sit alone:','','Movement','question11');
+const question12 = new MultipleChoiceImpair('Ability to lay down alone:','','Movement','question12');
+const question13 = new MultipleChoiceImpair('Ability to visit infrastracture:','','Movement','question13');
+//Vital functions
 
 
 question1.display();
@@ -86,3 +97,13 @@ question2.display();
 question3.display();
 question4.display();
 question5.display();
+question6.display();
+question7.display();
+question8.display();
+question9.display();
+question10.display();
+question11.display();
+question12.display();
+question13.display();
+
+
