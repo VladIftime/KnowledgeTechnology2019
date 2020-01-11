@@ -122,7 +122,9 @@ const question26 = new MultipleChoiceImpair('Ability to dress alone','','Dress',
 const question27 = new MultipleChoiceImpair('Ability to undress alone','','Dress','question27')
 const question28 = new MultipleChoiceImpair('Ability to choose appropriate clothing','','Dress','question28')
 //Rest-Sleep
-
+const question29 = new MultipleChoiceImpair('Ability to fall asleep:','','RestSleep','question29')
+const question30 = new MultipleChoiceImpair('Ability to stay asleep:','','RestSleep','question30')
+const question31 = new MultipleChoice(':','','','RestSleep','question31')
 question1.display()
 question2.display()
 question3.display()
@@ -151,5 +153,8 @@ question25.display()
 question26.display()
 question27.display()
 question28.display()
+question29.display()
+question30.display()
+question31.display()
 
 
