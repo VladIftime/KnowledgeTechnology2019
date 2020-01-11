@@ -7,28 +7,28 @@ const submitButton = document.getElementById("submit");
 
 //Scores for areas and the total sccore
 var scores = {
-    communication:Number(0),
-    orientation:Number(0),
-    movement:Number(0),
-    vital:Number(0),
-    grooming:Number(0),
-    eatDrink:Number(0),
-    edivcretion:Number(0),
-    dress:Number(0),
-    restSleep:Number(0),
-    keepBusy:Number(0),
-    feelings:Number(0),
-    safeEnviroment:Number(0),
-    socialLife:Number(0),
-    edivistential:Number(0)
+    Communication:Number(0),
+    Orientation:Number(0),
+    Movement:Number(0),
+    Vital:Number(0),
+    Grooming:Number(0),
+    EatDrink:Number(0),
+    Excretion: Number(0),
+    Dress: Number(0),
+    RestSleep: Number(0),
+    KeepBusy: Number(0),
+    FeelingManWoman: Number(0),
+    SafeEnvironment: Number(0),
+    SocialLife: Number(0),
+    Existential: Number(0)
 }
 var totalScore = Number(0);
 var apply = 'No';
 var warning = false;
-// Tresholds
-const shouldApplyTreshold = 20;
-const maybeApplyTreshold = 10;
-const areaTreshold = 7;
+// Thresholds
+const shouldApplyThreshold = 20;
+const maybeApplyThreshold = 10;
+const areaThreshold = 7;
 
 //Calculate the score of a given question
 function scoreOfQuestion(questionId) {
@@ -61,7 +61,7 @@ function calculateScores() {
     
 }
 
-//Based on the scores calcluated above infere the best option for the user
+//Based on the scores calculated above infer the best option for the user
 function inference(){
     const applyNo = 'Based on the given answers you would most likely not obtain care.';
     const applyMaybe = 'Based on the given answers you should consider going to a proffesional to see if you could obtain outpatient care.';
@@ -70,16 +70,16 @@ function inference(){
     for (const area in scores) {
         if (scores.hasOwnProperty(area)) {
             const element = scores[area];
-            if(element > areaTreshold)
+            if(element > areaThreshold)
                 apply = 'maybe';
         }
     }
     
     
-    if(totalScore >= maybeApplyTreshold)
+    if(totalScore >= maybeApplyThreshold)
         apply = 'maybe';
 
-    if(totalScore >= shouldApplyTreshold)
+    if(totalScore >= shouldApplyThreshold)
         apply = 'yes';
 
     switch (apply) {

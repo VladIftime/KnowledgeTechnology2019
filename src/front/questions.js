@@ -1,7 +1,7 @@
 // Question class and objects
 let areas = ['Communication','Orientation','Movement','Vital','Grooming',
-             'Eat-Drink','Excretion','Dress','Rest-Sleep','Keep-busy',
-             'Feeling-man-woman','Safe-enviroment','Social-life','Existential'];
+             'EatDrink', 'Excretion', 'Dress', 'RestSleep', 'KeepBusy',
+             'FeelingManWoman','SafeEnvironment','SocialLife','Existential'];
 
 
 function createSections() {
@@ -75,7 +75,7 @@ class TickBox extends Question{
 }
 //Communication
 const question1 = new MultipleChoiceImpair('Hearing:','','Communication','question1');
-const question2 = new MultipleChoiceImpair('Sight','','Communication','question2');
+const question2 = new MultipleChoiceImpair('Sight:','','Communication','question2');
 const question3 = new MultipleChoiceImpair('Speech:','','Communication','question3');
 const question4 = new MultipleChoiceImpair('Ability to express feelings and desires:','','Communication','question4');
 //Orientation
@@ -88,7 +88,7 @@ const question9 = new MultipleChoiceImpair('Ability to walk alone:','','Movement
 const question10 = new MultipleChoiceImpair('Ability to stand alone:','','Movement','question10');
 const question11 = new MultipleChoiceImpair('Ability to sit alone:','','Movement','question11');
 const question12 = new MultipleChoiceImpair('Ability to lay down alone:','','Movement','question12');
-const question13 = new MultipleChoiceImpair('Ability to visit infrastracture:','','Movement','question13');
+const question13 = new MultipleChoiceImpair('Ability to visit infrastructure:','','Movement','question13');
 //Vital functions
 
 
