@@ -70,7 +70,7 @@ hr {
     border: none;
     text-align: center;
     outline: none;
-    transition: all 5s;
+    
 }
 
 .collapse-active, .collapse:hover {
@@ -85,20 +85,21 @@ hr {
     background-color:white;
     color: black;
     width: 50%;
+    transition: all 0.5s;
 }
 
 .q-grid {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 250px auto auto;
     grid-gap: 0px;
     padding-top: 10px;
 }
 
 .q-grid > p {
-    text-align: center;
+    text-align: left;
     grid-column: 2;
-    font-size: 25px;
-    font-weight: 800;
+    font-size: 20px;
+    font-weight: 200;
 }
 
 .ans-grid {
@@ -170,10 +171,10 @@ hr {
     color: #fff;
     text-align: center;
     border-radius: 6px;
-    padding: 5px 0;
+    padding: 5px 5px;
     position: absolute;
     z-index: 1;
-    bottom: 125%;
+    bottom: -250%;
     left: 10%;
     margin-left: -60px;
     opacity: 0;
@@ -183,7 +184,7 @@ hr {
 .tooltip .tooltiptext::after {
     content: "";
     position: absolute;
-    top: 100%;
+    bottom: 100%;
     left: 50%;
     margin-left: -5px;
     border-width: 5px;
