@@ -62,7 +62,6 @@ hr {
     font-family: "Courier New", Courier, monospace;
     font-size: 100%;
     font-weight: bold;
-
     background-color: #777;
     color: white;
     cursor: pointer;
@@ -81,12 +80,15 @@ hr {
     padding: 0 18px;
     display: none;
     overflow: hidden;
-    background-color: darkcyan;
+    background-color:white;
+    color: black;
+    width: 50%;
 }
 
 .q-grid {
     display: grid;
-    grid-template-columns: 25vw auto;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-gap: 0px;
 }
 
 .q-grid > p {
@@ -96,13 +98,13 @@ hr {
 
 .ans-grid {
     display: grid;
-    grid-template-columns: 40vw auto;
+    grid-template-columns: 25vw auto;
 }
 
 .ans-box {
     display: block;
     text-align: left;
-    grid-column: 2;
+    grid-column: 3;
 }
 
 .font {
@@ -112,3 +114,43 @@ hr {
 .warning{
     background-color: crimson;
 }
+.button-submit{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 8px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  
+  .button1-submit {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #4CAF50;
+  }
+  
+  .button1-submit:hover {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .div-wrap{
+      width: 50%;
+  }
+
+  .grid-container{
+      display: grid;
+      grid-template-columns:300px 360px 300px;
+      padding: 10px;
+ 
+  }
+
+  .container{
+      grid-column: 2;
+  }
