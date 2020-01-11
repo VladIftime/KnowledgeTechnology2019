@@ -33,8 +33,14 @@ class Question {
 
     showQuestion() {
         let sec = document.getElementById(this.classOfQuestion).getElementsByClassName('collapse-content')[0]       
-        sec.innerHTML+= '<div class='+this.classOfQuestion+' id='+this.name+'><div class = q-grid><p class=font>' + this.question + '</p></div></div>'
-    }
+        if(this.hint != ''){
+            sec.innerHTML += '<div class=' + this.classOfQuestion + ' id=' + this.name + '><div class = q-grid><p class=tooltip>' +
+                            this.question + '<span class="tooltiptext">' + this.hint + '</span> </p></div></div>'
+        } else {
+            sec.innerHTML += '<div class=' + this.classOfQuestion + ' id=' + this.name + '><div class = q-grid><p class=tooltip>' +
+                this.question + '</p></div></div>'
+        }
+        }
 
     showChoices() {
         return null;
@@ -85,7 +91,7 @@ const question2 = new MultipleChoiceImpair('Sight:','','Communication','question
 const question3 = new MultipleChoiceImpair('Speech:','','Communication','question3')
 const question4 = new MultipleChoiceImpair('Ability to express feelings and desires:','','Communication','question4')
 //Orientation
-const question5 = new MultipleChoiceImpair('Temporal orientation:','','Orientation','question5')
+const question5 = new MultipleChoiceImpair('Temporal orientation:','Be able to realise when you are supposed to arrive somewhere','Orientation','question5')
 const question6 = new MultipleChoiceImpair('Local orientation:','','Orientation','question6')
 const question7 = new MultipleChoiceImpair('Personal orientation:','','Orientation','question7')
 const question8 = new MultipleChoiceImpair('Situational orientation:','','Orientation','question8')
