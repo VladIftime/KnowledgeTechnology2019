@@ -1,0 +1,108 @@
+html {
+    font-family: "Courier New", Courier, monospace;
+    color: white;
+    background-color:  black;
+}
+
+.brokenLine {font-size: 5vw;}
+.oneLine {display: none;}
+
+@media screen and (min-width: 5cm) {
+    .brokenLine {display: none;}
+    .oneLine {font-size: 2vw; display: block}
+}
+
+body {
+    font-size: 2em;
+    text-align: center;
+}
+
+nav {
+    font-weight: bold;
+}
+
+footer {
+    font-weight: bold;
+}
+
+a:visited {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:link {
+    color: white;
+    background-color: transparent; 
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(139, 208, 251);
+    background-color: transparent; 
+    text-decoration: none;
+}
+
+a:active {
+    color: white;
+    background-color: transparent; 
+    text-decoration: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid white;
+    margin: 1em 0;
+    padding: 0; 
+}
+
+.collapse {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 0.5em;
+    font-weight: bold;
+
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 0.5em;
+    width: 100%;
+    border: none;
+    text-align: center;
+    outline: none;
+}
+
+.collapse-active, .collapse:hover {
+    background-color: #555;
+}
+
+.collapse-content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: darkcyan;
+}
+
+.q-grid {
+    display: grid;
+    grid-template-columns: 25vw auto;
+}
+
+.q-grid > p {
+    text-align: left;
+    grid-column: 2;
+}
+
+.ans-grid {
+    display: grid;
+    grid-template-columns: 40vw auto;
+}
+
+.ans-box {
+    display: block;
+    text-align: left;
+    grid-column: 2;
+}
+
+.font 
