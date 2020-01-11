@@ -89,19 +89,21 @@ hr {
 
 .q-grid {
     display: grid;
-    grid-template-columns: 200px auto 50px;
+    grid-template-columns: auto auto auto;
     grid-gap: 0px;
-    padding-top: 40px;
+    padding-top: 10px;
 }
 
 .q-grid > p {
-    text-align: left;
+    text-align: center;
     grid-column: 2;
+    font-size: 25px;
+    font-weight: 800;
 }
 
 .ans-grid {
     display: grid;
-    grid-template-columns: 150px 150px 200px auto;
+    grid-template-columns: auto auto auto auto;
 }
 
 .ans-box {
