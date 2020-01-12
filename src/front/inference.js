@@ -48,18 +48,18 @@ function goToQuestion(questionId, healthArea){
 //Calculate the score of a given question
 function scoreOfQuestion(questionId, healthArea) {
     let options = document.getElementsByName(questionId)
-    let sum = 0
+    let sum = Number(0)
     let answered = false
     for (let i = 0; i < options.length; i++) {
         if (options[i].checked) {
             let question = document.getElementById(questionId).getElementsByClassName('q-grid')[0].getElementsByClassName('tooltip')[0]
             question.classList.remove('warning')
-            sum += options[i].value
+            sum += Number(options[i].value)
             answered = true
         }
     }
     if(answered)
-        return sum
+        return Number(sum)
     goToQuestion(questionId,healthArea)
     return Number(0)
 }

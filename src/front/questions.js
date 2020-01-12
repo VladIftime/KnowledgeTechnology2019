@@ -79,7 +79,7 @@ class TickBox extends Question{
 
     showChoices() {
         let htmlString = '<div class = ans-grid> <div class = ans-box>'
-        htmlString += ('<input type=\'checkbox\' name=' + this.name + ' value= \'0\'>' + '<label class=font>'+ 'None' + '</label><br>')
+        htmlString += ('<input type=\'checkbox\' name=' + this.name + ' value= \'0\'>' + '<label class=font>'+ 'None of these' + '</label><br>')
         for (let index = 0; index < this.choices.length; index++) {
             htmlString += ('<input type=\'checkbox\' name=' + this.name + ' value= \'1\'>' + '<label class=font>' + this.choices[index] + '</label><br>')
         }
@@ -176,8 +176,8 @@ question26.display()
 question27.display()
 question28.display()
 question29.display()
-//TODO question30.display()
-question31.display()
+question30.display()
+//TODOquestion31.display()
 question32.display()
 question33.display()
 question34.display()
