@@ -26,9 +26,9 @@ var apply = 'No'
 var warning = false
 var areasWithProblems = []
 // Thresholds
-const shouldApplyThreshold = 10
-const maybeApplyThreshold = 5
-const areaThreshold = 4
+const shouldApplyThreshold = 12
+const maybeApplyThreshold = 6
+const areaThreshold = 3
 
 //Go to the questions that are unanswered; open the section and make them red; if this is the first question that is not answered
 //we also scroll to it
@@ -98,7 +98,7 @@ function inference(){
             }
         }
     }
-    if (areasWithProblems.length >= 3) {
+    if (areasWithProblems.length >= 2) {
          applyYes = 'Due to severe problems in the following areas: '
          for (let index = 0; index < areasWithProblems.length; index++) {
              const element = areasWithProblems[index];
