@@ -79,8 +79,9 @@ class TickBox extends Question{
 
     showChoices() {
         let htmlString = '<div class = ans-grid> <div class = ans-box>'
+        htmlString += ('<input type=\'checkbox\' name=' + this.name + ' value= \'0\'>' + '<label class=font>'+ 'None' + '</label><br>')
         for (let index = 0; index < this.choices.length; index++) {
-            htmlString += ('<input type=\'checkbox\' name=\'option\' value= \'1\'>' + this.choices[index] + '<br>')
+            htmlString += ('<input type=\'checkbox\' name=' + this.name + ' value= \'1\'>' + '<label class=font>' + this.choices[index] + '</label><br>')
         }
         document.getElementById(this.name).innerHTML += htmlString + '</div> </div>'
     }
@@ -112,7 +113,7 @@ const question18 = new TickBox('Body care:','Self-grooming',['Skin','Mouth','Sha
 const question19 = new MultipleChoiceImpair('Ability to eat:','','EatDrink','question19')
 const question20 = new MultipleChoiceImpair('Ability to drink:','','EatDrink','question20')
 const question21 = new MultipleChoiceImpair('Ability to cook:','','EatDrink','question21')
-//Excretion
+// //Excretion
 const question22 = new MultipleChoiceImpair('Ability to urinate:','','Excretion','question22')
 const question23 = new MultipleChoiceImpair('Ability to defecate','','Excretion','question23')
 const question24 = new MultipleChoice('Urinary incontinence','',['No','Yes'],'Excretion','question24')
