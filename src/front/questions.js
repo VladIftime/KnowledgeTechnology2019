@@ -131,9 +131,9 @@ const question32 = new MultipleChoice('Performing at least one hobby:','',['Yes'
 const question33 = new MultipleChoiceImpair('Ability to use media:','Watch TV, read the news, browse the internet etc.','KeepBusy','question33')
 const question34 = new MultipleChoiceImpair('Ability to plan a day:','Schedule an appointment/meeting, going to a date etc.','KeepBusy','question34')
 //Feeling man-women
-const question35 = new MultipleChoice('Can identify as assign gender:','Gender identity disorder',['Yes','No'],'FeelingManWomen','question35')
-const question36 = new MultipleChoice('Difficulties in defining self-sexual orientation:','',['No','Yes'],'FeelingManWomen','question36')
-const question37 = new MultipleChoiceImpair('Ability to perform sexually:','','FeelingManWomen','question37')
+const question35 = new MultipleChoice('Can identify as assign gender:','Gender identity disorder',['Yes','No'],'FeelingManWoman','question35')
+const question36 = new MultipleChoice('Difficulties in defining self-sexual orientation:','',['No','Yes'],'FeelingManWoman','question36')
+const question37 = new MultipleChoiceImpair('Ability to perform sexually:','','FeelingManWoman','question37')
 //Safe environment
 const question38 = new MultipleChoice('Risk of injury while alone:','Cut, trip, fall, hit etc.',['None','Medium','High'],'SafeEnvironment','question38')
 const question39 = new MultipleChoice('Risk of infection while alone:','Skin, blood, eye etc.',['None','Medium','High'],'SafeEnvironment','question39')
