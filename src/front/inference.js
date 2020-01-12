@@ -4,7 +4,6 @@
 const resultsContainer = document.getElementById('Result');
 const submitButton = document.getElementById("submit");
 
-
 //Scores for areas and the total score
 var scores = {
     Communication:Number(0),
