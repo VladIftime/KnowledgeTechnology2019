@@ -79,8 +79,9 @@ class TickBox extends Question{
 
     showChoices() {
         let htmlString = '<div class = ans-grid> <div class = ans-box>'
+        htmlString += ('<input type=\'checkbox\' name=' + this.name + ' value= \'0\'>' + '<label class=font>'+ 'None' + '</label><br>')
         for (let index = 0; index < this.choices.length; index++) {
-            htmlString += ('<input type=\'checkbox\' name=\'option\' value= \'1\'>' + this.choices[index] + '<br>')
+            htmlString += ('<input type=\'checkbox\' name=' + this.name + ' value= \'1\'>' + '<label class=font>' + this.choices[index] + '</label><br>')
         }
         document.getElementById(this.name).innerHTML += htmlString + '</div> </div>'
     }
@@ -101,23 +102,23 @@ const question10 = new MultipleChoiceImpair('Ability to stand alone:','','Moveme
 const question11 = new MultipleChoiceImpair('Ability to sit alone:','','Movement','question11')
 const question12 = new MultipleChoiceImpair('Ability to lay down alone:','','Movement','question12')
 const question13 = new MultipleChoiceImpair('Ability to visit infrastructure:','','Movement','question13')
-//Vital functions
+// //Vital functions
 const question14 = new MultipleChoiceImpair('Ability to breath:','','Vital','question14')
 const question15 = new MultipleChoiceImpair('Cardio-vascular system:','','Vital','question15')
 const question16 = new MultipleChoiceImpair('Ability to sense temperature:','','Vital','question16')
-//Self Grooming
+// //Self Grooming
 const question17 = new MultipleChoiceImpair('Ability to shower/bath alone','','Grooming','question17')
 const question18 = new TickBox('Body care:','',['Skin','Mouth','Shaving','Hair','Nails','Ears','Nose','Eyes'],'Grooming','question18')
-//Eat-Drink
+// //Eat-Drink
 const question19 = new MultipleChoiceImpair('Ability to eat:','','EatDrink','question19')
 const question20 = new MultipleChoiceImpair('Ability to drink:','','EatDrink','question20')
 const question21 = new MultipleChoiceImpair('Ability to cook:','','EatDrink','question21')
-//Excretion
+// //Excretion
 const question22 = new MultipleChoiceImpair('Ability to urinate:','','Excretion','question22')
 const question23 = new MultipleChoiceImpair('Ability to defecate','','Excretion','question23')
 const question24 = new MultipleChoice('Urinary incontinence','',['No','Yes'],'Excretion','question24')
 const question25 = new MultipleChoice('Bowel incontinence','',['No','Yes'],'Excretion','question25')
-//Dress
+// //Dress
 const question26 = new MultipleChoiceImpair('Ability to dress alone','','Dress','question26')
 const question27 = new MultipleChoiceImpair('Ability to undress alone','','Dress','question27')
 const question28 = new MultipleChoiceImpair('Ability to choose appropriate clothing','','Dress','question28')

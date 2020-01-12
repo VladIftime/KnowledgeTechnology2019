@@ -1,11 +1,11 @@
-// points are calculated here and then the answer is infered
+// points are calculated here and then the answer is inferred
 
 //Areas for printing the answer
 const resultsContainer = document.getElementById('Result');
 const submitButton = document.getElementById("submit");
 
 
-//Scores for areas and the total sccore
+//Scores for areas and the total score
 var scores = {
     Communication:Number(0),
     Orientation:Number(0),
@@ -25,10 +25,11 @@ var scores = {
 var totalScore = Number(0)
 var apply = 'No'
 var warning = false
+var areasWithProblems = []
 // Thresholds
 const shouldApplyThreshold = 20
 const maybeApplyThreshold = 10
-const areaThreshold = 7
+const areaThreshold = 4
 
 //Go to the questions that are unanswered; open the section and make them red; if this is the first question that is not answered
 //we also scroll to it
@@ -36,7 +37,7 @@ function goToQuestion(questionId, healthArea){
     let section = document.getElementById(healthArea).getElementsByClassName('collapse')[0]
     section.classList.toggle("collapse-active")
     section.nextElementSibling.style.display = 'block'
-    let question = document.getElementById(questionId).getElementsByClassName('q-grid')[0].getElementsByClassName('font')[0]
+    let question = document.getElementById(questionId).getElementsByClassName('q-grid')[0].getElementsByClassName('tooltip')[0]
     question.classList.add('warning')
     if(warning == false){
         question.scrollIntoView()
@@ -46,14 +47,19 @@ function goToQuestion(questionId, healthArea){
 
 //Calculate the score of a given question
 function scoreOfQuestion(questionId, healthArea) {
-    let options = document.getElementsByName(questionId);
+    let options = document.getElementsByName(questionId)
+    let sum = 0
+    let answered = false
     for (let i = 0; i < options.length; i++) {
-        if(options[i].checked){
-            let question = document.getElementById(questionId).getElementsByClassName('q-grid')[0].getElementsByClassName('font')[0]
+        if (options[i].checked) {
+            let question = document.getElementById(questionId).getElementsByClassName('q-grid')[0].getElementsByClassName('tooltip')[0]
             question.classList.remove('warning')
-            return options[i].value
+            sum += options[i].value
+            answered = true
         }
     }
+    if(answered)
+        return sum
     goToQuestion(questionId,healthArea)
     return Number(0)
 }
@@ -78,17 +84,37 @@ function calculateScores() {
 //Based on the scores calculated above infer the best option for the user
 function inference(){
     const applyNo = 'Based on the given answers you would most likely not obtain care.';
-    const applyMaybe = 'Based on the given answers you should consider going to a professional to see if you could obtain outpatient care.';
-    const applyYes = 'Based on the given answers you would most likely obtain outpatient care. Please contact a professional to help you with the procedure.';
+    var applyMaybe = 'Based on the given answers you should consider going to a professional to see if you could obtain outpatient care.';
+    var applyYes = 'Based on the given answers you would most likely obtain outpatient care. Please contact a professional to help you with the procedure.';
     //Determine if the patient suffers in one area enough to be consider for care
     for (const area in scores) {
         if (scores.hasOwnProperty(area)) {
             const element = scores[area]
-            if(element > areaThreshold)
+            if(element >= areaThreshold){
                 apply = 'maybe'
+                areasWithProblems.push(area.toString())
+                console.log(area);
+                console.log(areasWithProblems);
+                
+            }
         }
     }
-    
+    if (areasWithProblems.length >= 3) {
+         applyYes = 'Due to sever problems in the following areas: '
+         for (let index = 0; index < areasWithProblems.length; index++) {
+             const element = areasWithProblems[index];
+             applyYes += element + ', '
+         }
+         applyYes += 'you would most likely obtain outpatient care. Please contact a professional to help you with the procedure.'
+    } else if (areasWithProblems.length > 0) {
+        applyMaybe = 'Due to sever problems in the following areas: '
+        for (let index = 0; index < areasWithProblems.length; index++) {
+            const element = areasWithProblems[index];
+            applyMaybe += element + ', ' 
+        }
+        applyMaybe += 'you should consider going to a professional to see if you could obtain outpatient care.'
+    }
+
     
     if(totalScore >= maybeApplyThreshold)
         apply = 'maybe'
