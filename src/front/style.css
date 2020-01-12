@@ -74,12 +74,11 @@ hr {
     background-color: #328cc1;
     color: white;
     cursor: pointer;
-    padding-left: 50px;
     padding: 0.5em;
     width: 50%;
     height: auto;
     border: none;
-    text-align: left;
+    text-align: center;
     outline: none;
 }
 
@@ -106,13 +105,13 @@ div.b {
 
 .q-grid {
     display: grid;
-    grid-template-columns: 50px auto 10px;
+   grid-template-columns: 10px auto 10px;
     grid-gap: 0px;
     padding-top: 10px;
 }
 
 .q-grid > p {
-    text-align: left;
+    text-align: center;
     grid-column: 2;
     font-size: 20px;
     font-weight: 200;
@@ -120,8 +119,8 @@ div.b {
 
 .ans-grid {
     display: grid;
-    grid-template-columns: 50px auto 10px;
-    
+    grid-template-columns: auto auto auto;
+    padding-left: 20%;
 }
 
 .ans-box {
