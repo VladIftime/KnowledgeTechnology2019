@@ -119,7 +119,7 @@ div.b {
 
 .ans-grid {
     display: grid;
-    grid-template-columns: 200px 200px auto;
+    grid-template-columns: 200px 200px auto ;
 }
 
 .ans-box {
@@ -192,7 +192,7 @@ div.b {
     z-index: 1;
     bottom: -250%;
     left: 10%;
-    margin-left: -60px;
+    margin-left: 0px;
     opacity: 0;
     transition: opacity 0.3s;
 }
