@@ -140,7 +140,7 @@ div.b {
 .button-submit{
     background-color: #d9b310; /* Green */
     border: none;
-    color: #DFDCE3;
+    color: #1d2731;
     padding: 8px 15px;
     text-align: center;
     text-decoration: none;
@@ -154,7 +154,7 @@ div.b {
   
   .button1-submit {
     background-color: #d9b310;
-    color: white; 
+    color: #1d2731;
     border: 2px solid #d9b310;
     font-family: Lato;
   }
@@ -235,7 +235,7 @@ div.b {
   .divInstructions {
     width: 50%;
     padding: 50px 0;
-    text-align: center;
+    text-align: left;
     background-color: transparent;
     margin-top: 20px;
     margin: 0 auto;
@@ -251,7 +251,7 @@ div.b {
   }
 
   .button-instructions:hover {
-    color: rgb(136, 93, 103);
+    color: #1d2731;
     background-color: transparent; 
     text-decoration: none;
 }
