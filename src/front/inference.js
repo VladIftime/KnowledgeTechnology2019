@@ -28,7 +28,7 @@ var areasWithProblems = []
 // Thresholds
 const shouldApplyThreshold = 12
 const maybeApplyThreshold = 6
-const areaThreshold = 3
+const areaThreshold = 4
 
 //Go to the questions that are unanswered; open the section and make them red; if this is the first question that is not answered
 //we also scroll to it
