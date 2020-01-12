@@ -22,30 +22,33 @@
             </header>
             <nav>
                 <hr>
-                <a href="http://localhost:8000/" class="font">Home</a>
+                <a href="/" class="font">Home</a>
                 <button id="myDIV" class="font button-instructions">Instructions</button>
                 <hr>
             </nav>
             
-            <div id="divInstructions" class="divInstructions">Click on each of the following 14 health areas and answer ALL the questions. <br>
-                                                             Some of the questions provide further explanation or examples, hover over them to see. 
-                                                             The answers can be changed at any time during the test. 
-                                                             You can also skip a question and answer it later. <br>
-                                                             After you have answered all the questions, press the Submit button. 
-                                                             If you miss a question, the system will point you at it. <br>
-                                                              The feedback will appear under the Submit button.<br> <br>
-                                                              We want to remind you that our feedback is not a professional opinion.
-                                                               For further explanations, please address to a professional. <br><br>                
-                                                               To close the instructions, press again on "Instructions".  </div>
+            <div id="divInstructions" class="divInstructions">
+                This system is built to help you decide whether you should apply for outpatient care by answer a set of simple questions.
+                This should take no longer than five minutes.            
+                Click on each of the following 14 health areas and answer ALL the questions. <br>
+                Some of the questions provide further explanation or examples, hover over them to see hints. 
+                The answers can be changed at any time during the test. 
+                You can also skip a question and answer it later. <br>
+                After you have answered all the questions, press the Submit button. 
+                If you miss a question, the system will point you towards it. <br>
+                The feedback will appear under the Submit button.<br> <br>
+                We want to remind you that our feedback is not a professional opinion.
+                For further explanations, please contact a health care professional. <br><br>                
+                To close the instructions, press again on "Instructions".  </div>
             <p></p>
             <article > 
                 
                 <section id=HealthAreas></section>
             
             </article>
-                <div id = warning class= warn style="display: none;">Please answers all the questions before submitting</div>
-                <button id= submit class='button-submit button1-submit'>SUBMIT</button>
-                <div id = Result ></div>
+                <div id=warning class=warn style="display: none;">Please answers all questions before submitting</div>
+                <button id=submit class="button-submit button1-submit">SUBMIT</button>
+                <div id=Result ></div>
             <footer>
                 <hr>
                 <p><a href="https://github.com/VladIftime/">Vlad Cosmin Iftime</a></p>
@@ -57,6 +60,6 @@
         <script src="questions.js"></script>
         <script src="inference.js"></script>
         <script src="collapsible.js"></script>
-        <script src='instructions.js'></script>
+        <script src="instructions.js"></script>
     </body>
 </html> 
