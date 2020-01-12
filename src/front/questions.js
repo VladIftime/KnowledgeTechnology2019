@@ -108,7 +108,7 @@ const question15 = new MultipleChoiceImpair('Cardio-vascular system:','Heart pro
 const question16 = new MultipleChoiceImpair('Ability to sense temperature:','Too hot, too cold','Vital','question16')
 //Self Grooming
 const question17 = new MultipleChoiceImpair('Ability to shower/bath alone:','','Grooming','question17')
-const question18 = new TickBox('Body care:','Self-grooming',['Skin','Mouth','Shaving','Hair','Nails','Ears','Nose','Eyes'],'Grooming','question18')
+const question18 = new TickBox('Cannot self-groom:','Inability to clean the following body parts alone',['Skin','Mouth','Shaving','Hair','Nails','Ears','Nose','Eyes'],'Grooming','question18')
 //Eat-Drink
 const question19 = new MultipleChoiceImpair('Ability to eat:','','EatDrink','question19')
 const question20 = new MultipleChoiceImpair('Ability to drink:','','EatDrink','question20')
@@ -125,7 +125,7 @@ const question28 = new MultipleChoiceImpair('Ability to choose appropriate cloth
 //Rest-Sleep
 const question29 = new MultipleChoiceImpair('Ability to fall asleep:','','RestSleep','question29')
 const question30 = new MultipleChoiceImpair('Ability to stay asleep:','','RestSleep','question30')
-//TODO const question31 = new MultipleChoice(':','','','RestSleep','question31')
+const question31 = new MultipleChoice('Hours of sleep:','On average in a day',['12-8','8-6','6-4','> 4 or 12 <'],'RestSleep','question31')
 //Keep busy
 const question32 = new MultipleChoice('Performing at least one hobby:','',['Yes','No'],'KeepBusy','question32')
 const question33 = new MultipleChoiceImpair('Ability to use media:','Watch TV, read the news, browse the internet etc.','KeepBusy','question33')
@@ -177,7 +177,7 @@ question27.display()
 question28.display()
 question29.display()
 question30.display()
-//TODOquestion31.display()
+question31.display()
 question32.display()
 question33.display()
 question34.display()

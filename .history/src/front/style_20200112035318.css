@@ -1,0 +1,215 @@
+/Photo by Pietro De Grandi on Unsplash
+html {
+    font-family: Lato;
+    color: white;
+    background-color:	rgb(0, 0, 26);
+}
+
+.brokenLine {font-size: 100%;}
+.oneLine {display: none;}
+
+@media screen and (min-width: 5cm) {
+    .brokenLine {display: none;}
+    .oneLine {font-size: 200%; display: block}
+}
+
+body {
+    font-size: 100%;
+    text-align: center;
+}
+
+nav {
+    font-weight: bold;
+}
+
+footer {
+    font-weight: bold;
+}
+
+a:visited {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:link {
+    color: white;
+    background-color: transparent; 
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(139, 208, 251);
+    background-color: transparent; 
+    text-decoration: none;
+}
+
+a:active {
+    color: white;
+    background-color: transparent; 
+    text-decoration: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid white;
+    margin: 1em 0;
+    padding: 0; 
+}
+
+.collapse {
+    font-family: Lato;
+    font-size: 100%;
+    font-weight: bold;
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 0.5em;
+    width: 50%;
+    border: none;
+    text-align: center;
+    outline: none;
+    
+}
+
+.collapse-active, .collapse:hover {
+    background-color: #555;
+}
+
+.collapse-content {
+    margin: 0 auto;
+    padding: 0;
+    display: none;
+    overflow: hidden;
+    background-color:white;
+    color: black;
+    width: 50%;
+    transition: all 0.5s;
+}
+
+.q-grid {
+    display: grid;
+    grid-template-columns: 250px auto auto;
+    grid-gap: 0px;
+    padding-top: 10px;
+}
+
+.q-grid > p {
+    text-align: left;
+    grid-column: 2;
+    font-size: 20px;
+    font-weight: 200;
+}
+
+.ans-grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+.ans-box {
+    display: block;
+    text-align: left;
+    grid-column: 3;
+    padding-bottom: 10px;
+}
+
+.font {
+    font-size: 100%;
+}
+
+.warning{
+    color: crimson;
+    font-weight: 800;
+}
+.button-submit{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 8px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  
+  .button1-submit {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #4CAF50;
+  }
+  
+  .button1-submit:hover {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  .grid-container{
+      display: grid;
+      grid-template-columns:300px 360px 300px;
+      padding: 10px;
+ 
+  }
+
+  .container{
+      grid-column: 2;
+  }
+
+/* Tooltip */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: auto;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: -250%;
+    left: 10%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.h1-glow {
+    color: white;
+    text-shadow: 1px 1px 20px grey, 0 0 50px white, 0 0 50px white;
+  }
+  
+  .warn{
+      padding: 2.5%;
+      font-size: 30px;
+  }
+  .div-result{
+      width: 20%;
+      border: 2px solid white;
+      color: pink;
+      margin: 0 auto;  
+  }

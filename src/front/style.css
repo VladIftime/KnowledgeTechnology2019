@@ -1,7 +1,8 @@
 html {
     font-family: Lato;
     color: white;
-    background-color:	rgb(0, 0, 26);
+    background-color: violet;
+
 }
 
 .brokenLine {font-size: 100%;}
@@ -205,4 +206,10 @@ hr {
   .warn{
       padding: 2.5%;
       font-size: 30px;
+  }
+  .div-result{
+      width: 20%;
+      border: 2px solid white;
+      color: pink;
+      margin: 0 auto;  
   }
