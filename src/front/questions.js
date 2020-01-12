@@ -195,4 +195,17 @@ question45.display()
 question46.display()
 
 
+// the button for instructions, for some reason does not work in a separate script file
+const button = document.getElementById("myDIV")
+var x = document.getElementById("divInstructions");
+x.style.display = "none";
+function myFunction() {
+   
+    if (x.style.display == "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
 
+button.addEventListener("click",myFunction)  

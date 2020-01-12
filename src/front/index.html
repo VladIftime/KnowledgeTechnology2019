@@ -1,11 +1,6 @@
 <!DOCTYPE html>
-<<<<<<< HEAD
 <html  lang="en">
     <head>
-=======
-<html lang="en">
-    <head >
->>>>>>> d290e84f32513cc6322a92503d3b5e40227c9cd8
         <meta charset="UTF-8">
         <meta name="description" content="This is a knowledge base and inference system. It classifies a patient's need for outpatient care.">
         <meta name="keywords" content="Outpatient, Care, knowledge, base, technology, inference">
@@ -27,9 +22,22 @@
             </header>
             <nav>
                 <hr>
-                <p class='font'><a href="http://localhost:8000/">Home</a></p>
+                <a href="http://localhost:8000/" class="font">Home</a>
+                <button id="myDIV" class="font button-instructions">Instructions</button>
                 <hr>
             </nav>
+            
+            <div id="divInstructions" class="divInstructions">Click on each of the following 14 health areas and answer ALL the questions. <br>
+                                                             Some of the questions provide further explanation or examples, hover over them to see. 
+                                                             The answers can be changed at any time during the test. 
+                                                             You can also leave a question and answer it later. <br> 
+                                                             After you answered all the questions, press the Submit button. 
+                                                             If you miss a question, the system will point you at it. <br>
+                                                              The feedback will appear under the Submit button.<br> <br>
+                                                              We want to remind you that our feedback is not a professional opinion.
+                                                               For further explanations, please address to a professional. <br>                
+                                                               To close the instructions, press again on "Instructions".  </div>
+            <p></p>
             <article > 
                 
                 <section id=HealthAreas></section>
@@ -49,5 +57,6 @@
         <script src="questions.js"></script>
         <script src="inference.js"></script>
         <script src="collapsible.js"></script>
+        <script src='instructions.js'></script>
     </body>
 </html> 
