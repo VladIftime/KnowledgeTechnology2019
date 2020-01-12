@@ -100,7 +100,7 @@ function inference(){
         }
     }
     if (areasWithProblems.length >= 3) {
-         applyYes = 'Due to sever problems in the following areas: '
+         applyYes = 'Due to severe problems in the following areas: '
          for (let index = 0; index < areasWithProblems.length; index++) {
              const element = areasWithProblems[index];
              applyYes += element + ', '
