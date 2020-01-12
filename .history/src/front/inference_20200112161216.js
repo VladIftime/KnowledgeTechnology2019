@@ -105,7 +105,7 @@ function inference(){
              const element = areasWithProblems[index];
              applyYes += element + ', '
          }
-         applyYes += 'we consider that there is a very strong chance to obtain outpatient care and that an application should be made.'
+         applyYes += 'you would most likely obtain outpatient care. Please contact a professional to help you with the procedure.'
     } else if (areasWithProblems.length > 0) {
         applyMaybe = 'Due to sever problems in the following areas: '
         for (let index = 0; index < areasWithProblems.length; index++) {

@@ -1,0 +1,231 @@
+html {
+    background-image: linear-gradient(rgba(11, 60, 93, .80), rgba(11, 60, 93, .80)),
+    url("https://images.unsplash.com/photo-1562557082-7f2785d741e7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1504&q=80");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+body {
+    font-size: 100%;
+    text-align: center;
+    margin: 0;
+    font-family: Lato;
+    color: #d9b310;
+}
+
+
+.brokenLine {font-size: 100%;}
+.oneLine {display: none;}
+
+@media screen and (min-width: 5cm) {
+    .brokenLine {display: none;}
+    .oneLine {font-size: 200%; display: block}
+}
+
+
+
+nav {
+    font-weight: bold;
+}
+
+footer {
+    font-weight: bold;
+}
+
+a:visited {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:link {
+    color: white;
+    background-color: transparent; 
+    text-decoration: none;
+}
+
+a:hover {
+    color: #1d2731;                     
+    background-color: transparent; 
+    text-decoration: none;
+}
+
+a:active {
+    color: white;
+    background-color: transparent; 
+    text-decoration: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #76323f;
+    margin: 1em 0;
+    padding: 0; 
+}
+
+.collapse {
+    font-family: Lato;
+    font-size: 150%;
+    font-weight: lighter;
+    background-color: #565656;
+    color: white;
+    cursor: pointer;
+    padding: 0.5em;
+    width: 50%;
+    height: auto;
+    border: none;
+    text-align: center;
+    outline: none;
+}
+
+
+
+.collapse:hover {
+    background-color: #bd8f65;
+}
+
+.collapse-content {
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    background-color:#E9DCCD;
+    color: black;
+    width: 50%;
+    max-height: 0;
+    transition: max-height 0.5s ease-out;
+}
+
+.q-grid {
+    display: grid;
+    grid-template-columns: 250px auto auto;
+    grid-gap: 0px;
+    padding-top: 10px;
+}
+
+.q-grid > p {
+    text-align: left;
+    grid-column: 2;
+    font-size: 20px;
+    font-weight: 200;
+}
+
+.ans-grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+.ans-box {
+    display: block;
+    text-align: left;
+    grid-column: 3;
+    padding-bottom: 10px;
+}
+
+.font {
+    font-size: 100%;
+}
+
+.warning{
+    color: crimson;
+    font-weight: 800;
+}
+.button-submit{
+    background-color: #613A43; /* Green */
+    border: none;
+    color: #DFDCE3;
+    padding: 8px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px 10px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  
+  .button1-submit {
+    background-color: #613A43;
+    color: white; 
+    border: 2px solid #613A43;
+    font-family: Lato;
+  }
+  
+  .button1-submit:hover {
+    background-color: rgb(141, 85, 98);
+    color: white;
+  }
+
+  .grid-container{
+      display: grid;
+      grid-template-columns:300px 360px 300px;
+      padding: 10px;
+ 
+  }
+
+  .container{
+      grid-column: 2;
+  }
+
+/* Tooltip */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: auto;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: -250%;
+    left: 10%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.h1-glow {
+    color: white;
+    text-shadow: 1px 1px 20px grey, 0 0 50px white, 0 0 50px white;
+  }
+  
+  .warn{
+      padding: 2.5%;
+      font-size: 30px;
+  }
+  .back{
+      background:url('https://i.pinimg.com/originals/b6/5c/d4/b65cd4f1ce1b90cf2fbe3343fc09a5d6.jpg');
+      position: relative;
+  }
+  .layer {
+      background-color: hsl(235, 17%, 25%,0.7);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+  }

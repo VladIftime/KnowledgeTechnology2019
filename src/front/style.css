@@ -1,5 +1,5 @@
 html {
-    background-image: linear-gradient(rgba(54, 56, 76, .90), rgba(54, 56, 76, .90)),
+    background-image: linear-gradient(rgba(11, 60, 93, .80), rgba(11, 60, 93, .80)),
     url("https://images.unsplash.com/photo-1562557082-7f2785d741e7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1504&q=80");
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -12,7 +12,7 @@ body {
     text-align: center;
     margin: 0;
     font-family: Lato;
-    color: #e3baB3;
+    color: #d9b310;        /*text*/
 }
 
 
@@ -47,7 +47,7 @@ a:link {
 }
 
 a:hover {
-    color: rgb(136, 93, 103);
+    color: #1d2731;                     /*HOVER*/
     background-color: transparent; 
     text-decoration: none;
 }
@@ -62,7 +62,7 @@ hr {
     display: block;
     height: 1px;
     border: 0;
-    border-top: 1px solid #e3baB3;
+    border-top: 1px solid #d9b310;
     margin: 1em 0;
     padding: 0; 
 }
@@ -71,7 +71,7 @@ hr {
     font-family: Lato;
     font-size: 150%;
     font-weight: lighter;
-    background-color: #849974;
+    background-color: #328cc1;
     color: white;
     cursor: pointer;
     padding: 0.5em;
@@ -82,17 +82,21 @@ hr {
     outline: none;
 }
 
+div.b {
+    line-height: 5px;
+}
 
 
 .collapse:hover {
-    background-color: #3b4b30;
+    background-color: #1d2731;
+    /*HOVER*/
 }
 
 .collapse-content {
     margin: 0 auto;
     padding: 0;
     overflow: hidden;
-    background-color:#E9DCCD;
+    background-color:white;
     color: black;
     width: 50%;
     max-height: 0;
@@ -134,7 +138,7 @@ hr {
     font-weight: 800;
 }
 .button-submit{
-    background-color: #613A43; /* Green */
+    background-color: #d9b310; /* Green */
     border: none;
     color: #DFDCE3;
     padding: 8px 15px;
@@ -149,14 +153,14 @@ hr {
   }
   
   .button1-submit {
-    background-color: #613A43;
+    background-color: #d9b310;
     color: white; 
-    border: 2px solid #613A43;
+    border: 2px solid #d9b310;
     font-family: Lato;
   }
   
   .button1-submit:hover {
-    background-color: rgb(141, 85, 98);
+    background-color: #d9b310;
     color: white;
   }
 
@@ -214,8 +218,12 @@ hr {
   }
   
   .warn{
-      padding: 2.5%;
+      margin: 0 auto;
+      padding-top: 10px;
+      padding-bottom: 10px;
       font-size: 30px;
+      width: 50%;
+      background-color: #1d2731;
   }
   .back{
       background:url('https://i.pinimg.com/originals/b6/5c/d4/b65cd4f1ce1b90cf2fbe3343fc09a5d6.jpg');

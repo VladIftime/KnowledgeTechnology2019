@@ -15,7 +15,7 @@ if (initialized == 0) {
 // Set all cards to closed
 function closeAll() {
     for (let i = 0; i < coll.length; i++) {
-        coll[i].nextElementSibling.style.maxHeight = null
+        coll[i].nextElementSibling.style.maxHeight = "none"
     }
 }
 

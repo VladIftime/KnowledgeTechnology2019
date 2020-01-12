@@ -84,8 +84,8 @@ function calculateScores() {
 //Based on the scores calculated above infer the best option for the user
 function inference(){
     const applyNo = 'Based on the given answers we do not recommend applying for outpatient care.';
-    var applyMaybe = 'Based on the given answers we consider that there may be a chance to obtain outpatient care.';
-    var applyYes = 'Based on the given answers we consider that there is a very strong chance to obtain outpatient care and that an application should be made.';
+    var applyMaybe = 'Based on the given answers ';
+    var applyYes = 'Based on the given answers ';
     //Determine if the patient suffers in one area enough to be consider for care
     for (const area in scores) {
         if (scores.hasOwnProperty(area)) {
@@ -105,14 +105,14 @@ function inference(){
              const element = areasWithProblems[index];
              applyYes += element + ', '
          }
-         applyYes += 'we consider that there is a very strong chance to obtain outpatient care and that an application should be made.'
+         applyYes += 'you would most likely obtain outpatient care. Please contact a professional to help you with the procedure.'
     } else if (areasWithProblems.length > 0) {
         applyMaybe = 'Due to sever problems in the following areas: '
         for (let index = 0; index < areasWithProblems.length; index++) {
             const element = areasWithProblems[index];
             applyMaybe += element + ', ' 
         }
-        applyMaybe += 'we consider that there may be a chance to obtain outpatient care.'
+        applyMaybe += 'you should consider going to a professional to see if you could obtain outpatient care.'
     }
 
     
@@ -132,7 +132,6 @@ function inference(){
         default: resultsContainer.innerHTML = applyNo;
             break
     }
-    resultsContainer.classList.add('warn')
 }
 
 function warn(show) {
