@@ -36,7 +36,7 @@ const areaThreshold = 4
 function goToQuestion(questionId, healthArea){
     let section = document.getElementById(healthArea).getElementsByClassName('collapse')[0]
     section.classList.toggle("collapse-active")
-    section.nextElementSibling.style.display = 'block'
+    section.nextElementSibling.style.maxHeight = section.nextElementSibling.scrollHeight + "px";
     let question = document.getElementById(questionId).getElementsByClassName('q-grid')[0].getElementsByClassName('tooltip')[0]
     question.classList.add('warning')
     if(warning == false){
