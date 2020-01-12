@@ -26,8 +26,8 @@ var apply = 'No'
 var warning = false
 var areasWithProblems = []
 // Thresholds
-const shouldApplyThreshold = 20
-const maybeApplyThreshold = 10
+const shouldApplyThreshold = 10
+const maybeApplyThreshold = 5
 const areaThreshold = 4
 
 //Go to the questions that are unanswered; open the section and make them red; if this is the first question that is not answered
