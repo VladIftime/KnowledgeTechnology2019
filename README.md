@@ -24,3 +24,6 @@ To start the server
 Open web browser and enter domain
 
     http://localhost:8000/
+
+Another way to access the system is to go to:
+    http://sentimentfriend.com/
